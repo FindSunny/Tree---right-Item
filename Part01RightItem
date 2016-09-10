@@ -16,14 +16,19 @@ do {
 // 循环结束， z找到上一个节点
 // 适时调用rigthNode即可
 
-// 添加到addList
-addKeyList.add ( rigthNode(selfNode, prev) );
-
-// 改变其对应的lstData
-//.....
-for (...){
-	addKeyValueList.add ( rigthNode(selfNode, prev) ) 
-}
+do {
+	//....
+	
+	// 添加到addList
+	addKeyList.add ( rigthNode(selfNode, prev) );
+	
+	// 改变其对应的lstData
+	//.....
+	for (...){
+		addKeyValueList.add ( rigthNode(selfNode, prev) ) 
+	}
+	
+} while(...)
 	
 
 	
