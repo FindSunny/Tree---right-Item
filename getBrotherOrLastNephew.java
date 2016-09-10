@@ -1,0 +1,23 @@
+/** 
+*	→ 核心算法 - 
+*	一， 找到self哥哥 或 其最后一个儿子
+*	
+*	@selfMKJ: 哥哥的MKJ阶层
+*	@prev: 前一个节点
+*	@return: 找到了！！！
+*/
+public boolean getBrotherOrLastNephew(int selfMKJ, Node prevNode) {
+	
+	if (selfMKJ < 1 || selfMKJ > 10) {
+		return false;
+	}
+	
+	if (prevNode == null) {
+		return false;
+	}
+
+	if(selfMKJ == prevNode.MKLLVL || selfMKJ == prevNode.MKLLVL - 1) {
+		return true;
+	}
+
+}
