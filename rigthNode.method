@@ -1,0 +1,89 @@
+/** 
+*	→ 核心算法 - 
+*	二， 辈分后移 - 变成哥哥第几个孩子（或者其子孙）
+*	
+*	@self: 要移动节点 或 者其子节点
+*	@prev: 比self大一岁的哥哥 或 该哥哥的最后一个儿子 <getBrotherOrLastNephew(int,Node)>
+*	@return: 修正后的Key
+*
+*	1. 设置必要参数： 移动点 && 变成哥哥第几个孩子（或者其子孙）
+*	2. MKJ + 1
+*	3. 顺次后移辈分
+*/
+public Node rigthNode(Node self, Node prev) {
+
+	Node newCopy = self.clone();
+	
+	// 父节点的第一个孩子
+	int positionIndex = 0；
+	// 移动点
+	int mkjLvl = 0;
+	
+	if (self.MKJLVL == prev.MKJLVL) {
+		positionIndex = 1;
+		mkjLvl = prev.MKJLVL;
+	} else {
+		positionIndex = prev.getLastLvl() + 1;
+		mkjLvl = prev.MKJLVL - 1;
+	}
+	
+	// 1. MKJLVL + 1
+	newCopy.MKJLVL ++;
+	
+	// 2. 重新赋值阶层
+	if (mkjLvl == LVL1) {
+		newCopy.LVLREP1 --;
+		newCopy.LVLREP2 = positionIndex;
+	} else if (mkjLvl == LVL2) {
+		newCopy.LVLREP2 --;
+		newCopy.LVLREP3 = positionIndex;
+	} else if (mkjLvl == LVL3) {
+		newCopy.LVLREP3 --;
+		newCopy.LVLREP4 = positionIndex;
+	} else if (mkjLvl == LVL4) {
+		newCopy.LVLREP4 --;
+		newCopy.LVLREP5 = positionIndex;
+	} else if (mkjLvl == LVL5) {
+		newCopy.LVLREP5 --;
+		newCopy.LVLREP6 = positionIndex;
+	} else if (mkjLvl == LVL6) {
+		newCopy.LVLREP6 --;
+		newCopy.LVLREP7 = positionIndex;
+	} else if (mkjLvl == LVL7) {
+		newCopy.LVLREP7 --;
+		newCopy.LVLREP8 = positionIndex;
+	} else if (mkjLvl == LVL8) {
+		newCopy.LVLREP8 --;
+		newCopy.LVLREP9 = positionIndex;
+	}  else if (mkjLvl == LVL9) {
+		newCopy.LVLREP9 --;
+		newCopy.LVLREP10 = positionIndex;
+	} 
+	
+	switch (mkjLvl) {
+		case LVL1:
+			newCopy.LVLREP3 = self.LVLREP2;
+		case LVL2:
+			newCopy.LVLREP4 = self.LVLREP3;
+		case LVL3:
+			newCopy.LVLREP5 = self.LVLREP4;
+		case LVL4:
+			newCopy.LVLREP6 = self.LVLREP5;
+		case LVL5:
+			newCopy.LVLREP7 = self.LVLREP6;
+		case LVL6:
+			newCopy.LVLREP8 = self.LVLREP7;
+		case LVL7:
+			newCopy.LVLREP9 = self.LVLREP8;
+		case LVL8:
+			newCopy.LVLREP10 = self.LVLREP9;
+		case LVL9:
+			break;
+		default:
+			break;			
+	}
+	
+	// 该节点： 修正后的节点（addList.add(newCopy)）
+	return newCopy;
+
+}
