@@ -4,7 +4,7 @@
 *	
 *	@selfMKJ: 哥哥的MKJ阶层
 *	@prev: 前一个节点
-*	@return: 找到了！！！
+*	@return: 找到了！！
 */
 public boolean getBrotherOrLastNephew(int selfMKJ, Node prevNode) {
 	
