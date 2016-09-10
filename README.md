@@ -1,5 +1,5 @@
 # Tree---right-Item
-用于特定Tree 移动 --- 成为哥哥的孩子
+用于Tree指定节点移动 --- 成为哥哥的孩子
 
 
 ahhhhahahahhaahhhaah~~~~~~~~~~~
