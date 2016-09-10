@@ -1,0 +1,29 @@
+/**
+*	→ 核心算法 - 
+*	rightItem中，部分算法
+*/
+
+//。。。。 mkjLel 已知
+
+Node prevNode = null;
+
+int upPath = pathID
+do {
+	upPath = upPath - 1;
+	prevNode = this.getMKJFields()[upPath];
+} while ( !getBrotherOrLastNephew(mkjLel, prevNode) );
+
+// 循环结束， z找到上一个节点
+// 适时调用rigthNode即可
+
+// 添加到addList
+addKeyList.add ( rigthNode(selfNode, prev) );
+
+// 改变其对应的lstData
+//.....
+for (...){
+	addKeyValueList.add ( rigthNode(selfNode, prev) ) 
+}
+	
+
+	
